@@ -17,6 +17,7 @@ void (*select_instruction(char *opcode))(stack_t **, unsigned int)
 		{"swap", swap},
 		{"add", add},
 		{"sub", sub},
+    {"div", _div},
 		{NULL, NULL}
 	};
 
