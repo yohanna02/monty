@@ -13,6 +13,8 @@ void run_instruction(data_t *data, stack_t **main_stack)
 {
 	void (*instruction)(stack_t **, unsigned int);
 
+	if (data->opcode[0] == '#')
+		return;
 	if (strcmp(data->opcode, "push") == 0)
 	{
 		push(data, main_stack);
