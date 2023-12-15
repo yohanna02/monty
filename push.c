@@ -21,7 +21,7 @@ void push(data_t *data, stack_t **stack)
 	}
 	if (!is_int(data->argument))
 	{
-		fprintf(stderr, "L%d:usage: push integer\n", data->line_number);
+		fprintf(stderr, "L%d: usage: push integer\n", data->line_number);
 		free(new_stack);
 		free_stack(*stack);
 		fclose(data->file);
