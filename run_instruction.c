@@ -22,6 +22,16 @@ void run_instruction(data_t *data, stack_t **main_stack)
 	}
 	if (strcmp(data->opcode, "nop") == 0)
 		return;
+	if (strcmp(data->opcode, "pstr") == 0)
+	{
+		pstr(main_stack);
+		return;
+	}
+	if (strcmp(data->opcode, "rotl") == 0)
+	{
+		rotl(main_stack);
+		return;
+	}
 	instruction = select_instruction(data->opcode);
 	if (instruction == NULL)
 	{
