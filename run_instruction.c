@@ -32,6 +32,11 @@ void run_instruction(data_t *data, stack_t **main_stack)
 		rotl(main_stack);
 		return;
 	}
+	if (strcmp(data->opcode, "rotr") == 0)
+	{
+		rotr(main_stack);
+		return;
+	}
 	instruction = select_instruction(data->opcode);
 	if (instruction == NULL)
 	{
