@@ -16,6 +16,8 @@ void rotl(stack_t **stack)
         return;
     while (tail->next != NULL)
         tail = tail->next;
+    if (tail->prev == NULL)
+        return;
     
     (*stack) = head->next;
     tail->next = head;
